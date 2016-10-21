@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="React Native," />
 
 
 
@@ -84,15 +84,25 @@
 
 
 
-<meta name="description" content="记录自己每天的进步">
-<meta property="og:type" content="website">
-<meta property="og:title" content="董昊">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Windows下搭建React Native android开发环境参考文章：React Native中文网由于一直做android原生开发，所以jdk，android sdk，还有它们的windows path环境变量配置就不多说了。这里有几个需要注意的点：
+
+jdk要是1.8或者更高版本
+sdk版本里必须要有android6.0，就是Android SDK Build-Tools 23.0.1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React Native环境搭建">
+<meta property="og:url" content="http://yoursite.com/2016/10/21/React-Native环境搭建/index.html">
 <meta property="og:site_name" content="董昊">
-<meta property="og:description" content="记录自己每天的进步">
+<meta property="og:description" content="Windows下搭建React Native android开发环境参考文章：React Native中文网由于一直做android原生开发，所以jdk，android sdk，还有它们的windows path环境变量配置就不多说了。这里有几个需要注意的点：
+
+jdk要是1.8或者更高版本
+sdk版本里必须要有android6.0，就是Android SDK Build-Tools 23.0.1">
+<meta property="og:updated_time" content="2016-10-21T15:53:58.674Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="董昊">
-<meta name="twitter:description" content="记录自己每天的进步">
+<meta name="twitter:title" content="React Native环境搭建">
+<meta name="twitter:description" content="Windows下搭建React Native android开发环境参考文章：React Native中文网由于一直做android原生开发，所以jdk，android sdk，还有它们的windows path环境变量配置就不多说了。这里有几个需要注意的点：
+
+jdk要是1.8或者更高版本
+sdk版本里必须要有android6.0，就是Android SDK Build-Tools 23.0.1">
 
 
 
@@ -110,7 +120,7 @@
   };
 </script>
 
-  <title> 董昊 </title>
+  <title> React Native环境搭建 | 董昊 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -131,9 +141,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -210,9 +218,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -232,10 +240,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/10/21/React-Native环境搭建/" itemprop="url">
-                  React Native环境搭建
-                </a>
+                React Native环境搭建
               
             
           </h1>
@@ -275,9 +280,7 @@
       
 
       
-        
-          
-            <h3 id="Windows下搭建React-Native-android开发环境"><a href="#Windows下搭建React-Native-android开发环境" class="headerlink" title="Windows下搭建React Native android开发环境"></a>Windows下搭建React Native android开发环境</h3><p>参考文章：<a href="http://reactnative.cn/docs/0.35/getting-started.html" target="_blank" rel="external">React Native中文网</a><br><br>由于一直做android原生开发，所以jdk，android sdk，还有它们的windows path环境变量配置就不多说了。<br><br>这里有几个需要注意的点：</p>
+        <h3 id="Windows下搭建React-Native-android开发环境"><a href="#Windows下搭建React-Native-android开发环境" class="headerlink" title="Windows下搭建React Native android开发环境"></a>Windows下搭建React Native android开发环境</h3><p>参考文章：<a href="http://reactnative.cn/docs/0.35/getting-started.html" target="_blank" rel="external">React Native中文网</a><br><br>由于一直做android原生开发，所以jdk，android sdk，还有它们的windows path环境变量配置就不多说了。<br><br>这里有几个需要注意的点：</p>
 <ul>
 <li>jdk要是1.8或者更高版本</li>
 <li>sdk版本里必须要有android6.0，就是Android SDK Build-Tools 23.0.1版，这是因为React Native就是在这个版本编译的，但是这并不意味React Native app只能运行在android 6.0的机器上，只是在这个版本进行编译，另外React Native app支持最低版本android4.1</li>
@@ -305,138 +308,58 @@
 <p>这时可以用浏览器访问<a href="http://localhost:8081/index.android.bundle?platform=android" target="_blank" rel="external">http://localhost:8081/index.android.bundle?platform=android</a>看看是否可以看到打包后的脚本（看到很长的js代码就对了）。第一次访问通常需要十几秒，并且在packager的命令行可以看到形如[====]的进度条。</p>
 <p>####运行模拟器<br>运行之后，保持packager开启，另外打开一个命令行窗口，然后在工程目录下运行：<br><br>    <code>react-native run-android</code> <br><br>首次运行需要等待一段时间，因为要从网上下载gradle依赖。<br><br>运行完毕后可以在模拟器或真机上看到应用自动启动了,后面关于React Native的调试就到React Native中文网看一看吧，建议先看一看视频，虽然是mac上搭建环境，但是调试这部分是与环境没有关系的。</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/24/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-24T01:46:08+08:00" content="2016-08-24">
-              2016-08-24
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-
-          
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/React-Native/" rel="tag">#React Native</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/24/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
 
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -444,6 +367,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -463,8 +390,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -507,6 +443,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows下搭建React-Native-android开发环境"><span class="nav-number">1.</span> <span class="nav-text">Windows下搭建React Native android开发环境</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -610,6 +557,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
