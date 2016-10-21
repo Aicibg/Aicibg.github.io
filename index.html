@@ -277,33 +277,30 @@
       
         
           
-            <h3 id="Windows下搭建React-Native-android开发环境"><a href="#Windows下搭建React-Native-android开发环境" class="headerlink" title="Windows下搭建React Native android开发环境"></a>Windows下搭建React Native android开发环境</h3><p>参考文章：<a href="http://reactnative.cn/docs/0.35/getting-started.html" target="_blank" rel="external">React Native中文网</a><br><br>由于一直做android原生开发，所以jdk，android sdk，还有它们的windows path环境变量配置就不多说了。<br><br>这里有几个需要注意的点：</p>
+            <h3 id="Windows10下搭建React-Native-android开发环境"><a href="#Windows10下搭建React-Native-android开发环境" class="headerlink" title="Windows10下搭建React Native android开发环境"></a>Windows10下搭建React Native android开发环境</h3><p>参考文章：<a href="http://reactnative.cn/docs/0.35/getting-started.html" target="_blank" rel="external">React Native中文网</a><br><br>由于一直做android原生开发，所以jdk，android sdk，还有它们的windows path环境变量配置就不多说了。<br><br>这里有几个需要注意的点：</p>
 <ul>
 <li>jdk要是1.8或者更高版本</li>
 <li>sdk版本里必须要有android6.0，就是Android SDK Build-Tools 23.0.1版，这是因为React Native就是在这个版本编译的，但是这并不意味React Native app只能运行在android 6.0的机器上，只是在这个版本进行编译，另外React Native app支持最低版本android4.1</li>
 <li>设置ANDROID_HOME环境变量，就是sdk的安装地址，然后再把%ANDROID_HOME%和%ANDROID_HOME%\tools加到path环境变量中</li>
 </ul>
-<p>ok,接下来进入正题<br><br>React Native中文网中第一个安装的就是Chocolatey，安装方式是在windows命令指示符中直接输入:</p>
-<blockquote>
-<p>@powershell -NoProfile -ExecutionPolicy Bypass -Command “iex ((new-object net.webclient).DownloadString(‘<a href="https://chocolatey.org/install.ps1" target="_blank" rel="external">https://chocolatey.org/install.ps1</a>‘))” &amp;&amp; SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin</p>
-</blockquote>
+<p>ok,接下来进入正题<br><br>React Native中文网中第一个安装的就是Chocolatey，安装方式是在windows命令指示符中直接输入:<br> <code>@powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;iex ((new-object net.webclient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))&quot; &amp;&amp; SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin</code></p>
 <p>但是没有安装成功，说是需要翻墙，但是我科学上网依然出错，实在是搞不定，只好放弃，不过安不安装Chocolatey其实关系不大，这个软件其实只是为了方便后面其他软件的安装，对于React Native的开发环境是没有作用的,Chocolatey相当于一个应用市场，可以方便我们以命令行的方式直接安装软件。<br><br>加入Chocolatey安装成功了，那就按React Native中文网得下一步继续</p>
-<p>####安装Python<br>打开命令提示符窗口，使用Chocolatey来安装Python 2.</p>
+<h4 id="安装Python"><a href="#安装Python" class="headerlink" title="安装Python"></a>安装Python</h4><p>打开命令提示符窗口，使用Chocolatey来安装Python 2.</p>
 <blockquote>
 <p>注意目前不支持Python 3版本。</p>
 </blockquote>
 <p> <code>choco install python2</code></p>
-<p>####安装node<br>打开命令提示符窗口，使用Chocolatey来安装NodeJS.<br> <code>choco install nodejs.install</code></p>
+<h4 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h4><p>打开命令提示符窗口，使用Chocolatey来安装NodeJS.<br> <code>choco install nodejs.install</code></p>
 <p>安装完node后建议设置npm镜像以加速后面的过程（或使用科学上网工具）。<br>    <code>npm config set registry https://registry.npm.taobao.org --global</code><br>    <code>npm config set disturl https://npm.taobao.org/dist --global</code></p>
-<p>####安装React Native命令行工具<br>   <code>npm install -g react-native-cli</code></p>
+<h4 id="安装React-Native命令行工具"><a href="#安装React-Native命令行工具" class="headerlink" title="安装React Native命令行工具"></a>安装React Native命令行工具</h4><p>   <code>npm install -g react-native-cli</code></p>
 <p>还有git，Genymotion的安装就不说了。<br><br><em>如果你的Chocolatey跟我一样没有安装成功</em>，那就只能自己去这些软件的官网下载安装咯。<br><br>贴心的附上网址<a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="external">Node</a>,<a href="https://www.python.org/downloads/release/python-2710/" target="_blank" rel="external">Python 2.7.10</a> (3.0 以上的版本据说不行)点击下载吧！<br><br>到这里环境基本就搭好了，那就赶紧试一试吧<br><br>依然是在windows的命令指示符中(其实我觉得PowerShell更好用)<br></p>
 <ul>
-<li>新建一个MyProject工程：<br><br>  <code>react-native init AwesomeProject</code></li>
-<li>切换到MyProject目录下：<br><br>  <code>cd MyProject</code></li>
-<li>运行packager：<br><br>  <code>react-native start</code></li>
+<li>新建一个MyProject工程：<br>  <code>react-native init AwesomeProject</code></li>
+<li>切换到MyProject目录下：<br>  <code>cd MyProject</code></li>
+<li>运行packager：<br>  <code>react-native start</code></li>
 </ul>
 <p>这时可以用浏览器访问<a href="http://localhost:8081/index.android.bundle?platform=android" target="_blank" rel="external">http://localhost:8081/index.android.bundle?platform=android</a>看看是否可以看到打包后的脚本（看到很长的js代码就对了）。第一次访问通常需要十几秒，并且在packager的命令行可以看到形如[====]的进度条。</p>
-<p>####运行模拟器<br>运行之后，保持packager开启，另外打开一个命令行窗口，然后在工程目录下运行：<br><br>    <code>react-native run-android</code> <br><br>首次运行需要等待一段时间，因为要从网上下载gradle依赖。<br><br>运行完毕后可以在模拟器或真机上看到应用自动启动了,后面关于React Native的调试就到React Native中文网看一看吧，建议先看一看视频，虽然是mac上搭建环境，但是调试这部分是与环境没有关系的。</p>
+<h4 id="运行模拟器"><a href="#运行模拟器" class="headerlink" title="运行模拟器"></a>运行模拟器</h4><p>运行之后，保持packager开启，另外打开一个命令行窗口，然后在工程目录下运行：<br>    <code>react-native run-android</code><br>首次运行需要等待一段时间，因为要从网上下载gradle依赖。<br><br>运行完毕后可以在模拟器或真机上看到应用自动启动了,后面关于React Native的调试就到React Native中文网看一看吧，建议先看一看视频，虽然是mac上搭建环境，但是调试这部分是与环境没有关系的。</p>
 
           
         
