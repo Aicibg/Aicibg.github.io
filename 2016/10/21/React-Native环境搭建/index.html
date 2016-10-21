@@ -96,7 +96,7 @@ sdk版本里必须要有android6.0，就是Android SDK Build-Tools 23.0">
 
 jdk要是1.8或者更高版本
 sdk版本里必须要有android6.0，就是Android SDK Build-Tools 23.0">
-<meta property="og:updated_time" content="2016-10-21T16:00:56.453Z">
+<meta property="og:updated_time" content="2016-10-21T16:08:02.392Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Native环境搭建">
 <meta name="twitter:description" content="Windows10下搭建React Native android开发环境参考文章：React Native中文网由于一直做android原生开发，所以jdk，android sdk，还有它们的windows path环境变量配置就不多说了。这里有几个需要注意的点：
@@ -287,7 +287,7 @@ sdk版本里必须要有android6.0，就是Android SDK Build-Tools 23.0">
 <li>设置ANDROID_HOME环境变量，就是sdk的安装地址，然后再把%ANDROID_HOME%和%ANDROID_HOME%\tools加到path环境变量中</li>
 </ul>
 <p>ok,接下来进入正题<br><br>React Native中文网中第一个安装的就是Chocolatey，安装方式是在windows命令指示符中直接输入:<br> <code>@powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;iex ((new-object net.webclient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))&quot; &amp;&amp; SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin</code></p>
-<p>但是没有安装成功，说是需要翻墙，但是我科学上网依然出错，实在是搞不定，只好放弃，不过安不安装Chocolatey其实关系不大，这个软件其实只是为了方便后面其他软件的安装，对于React Native的开发环境是没有作用的,Chocolatey相当于一个应用市场，可以方便我们以命令行的方式直接安装软件。<br><br>加入Chocolatey安装成功了，那就按React Native中文网得下一步继续</p>
+<p>但是没有安装成功，说是需要翻墙，但是我科学上网依然出错，实在是搞不定，只好放弃，不过安不安装Chocolatey其实关系不大，这个软件其实只是为了方便后面其他软件的安装，对于React Native的开发环境是没有作用的,Chocolatey相当于一个应用市场，可以方便我们以命令行的方式直接安装软件。<br><br>假如Chocolatey安装成功了，那就按React Native中文网的下一步继续</p>
 <h4 id="安装Python"><a href="#安装Python" class="headerlink" title="安装Python"></a>安装Python</h4><p>打开命令提示符窗口，使用Chocolatey来安装Python 2.</p>
 <blockquote>
 <p>注意目前不支持Python 3版本。</p>
@@ -296,7 +296,7 @@ sdk版本里必须要有android6.0，就是Android SDK Build-Tools 23.0">
 <h4 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h4><p>打开命令提示符窗口，使用Chocolatey来安装NodeJS.<br> <code>choco install nodejs.install</code></p>
 <p>安装完node后建议设置npm镜像以加速后面的过程（或使用科学上网工具）。<br>    <code>npm config set registry https://registry.npm.taobao.org --global</code><br>    <code>npm config set disturl https://npm.taobao.org/dist --global</code></p>
 <h4 id="安装React-Native命令行工具"><a href="#安装React-Native命令行工具" class="headerlink" title="安装React Native命令行工具"></a>安装React Native命令行工具</h4><p>   <code>npm install -g react-native-cli</code></p>
-<p>还有git，Genymotion的安装就不说了。<br><br><em>如果你的Chocolatey跟我一样没有安装成功</em>，那就只能自己去这些软件的官网下载安装咯。<br><br>贴心的附上网址<a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="external">Node</a>,<a href="https://www.python.org/downloads/release/python-2710/" target="_blank" rel="external">Python 2.7.10</a> (3.0 以上的版本据说不行)点击下载吧！<br><br>到这里环境基本就搭好了，那就赶紧试一试吧<br><br>依然是在windows的命令指示符中(其实我觉得PowerShell更好用)<br></p>
+<p>还有git，Genymotion的安装就不说了。<br><br><em>如果你的Chocolatey跟我一样没有安装成功</em>，那就只能自己去这些软件的官网下载安装咯。<br><br>贴心的附上网址<a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="external">Node</a>,<a href="https://www.python.org/downloads/release/python-2710/" target="_blank" rel="external">Python 2.7.10</a> (3.0 以上的版本据说不行)点击下载吧！node和Python安装完成后，依然按照上面说的方法安装React Native命令行工具。<br><br>到这里环境基本就搭好了，那就赶紧试一试吧<br><br>依然是在windows的命令指示符中(其实我觉得PowerShell更好用)<br></p>
 <ul>
 <li>新建一个MyProject工程：<br>  <code>react-native init AwesomeProject</code></li>
 <li>切换到MyProject目录下：<br>  <code>cd MyProject</code></li>
