@@ -84,16 +84,31 @@
 
 
 
-<meta name="description" content="新建一个React Native工程，小试牛刀">
+<meta name="description" content="新建一个React Native工程，小试牛刀上一篇搭建好了React Native开发环境，那么这一篇自然是按照传统新建Hello World工程咯！废话不多说，直接开干
+
+直接进入Windows的powershell，切换到你要新建工程的目录下，我的是这么写的： cd G:\DeveloperKits\ReactNative
+然后就可以新建工程了，新建一个HelloWorld工程： react">
 <meta property="og:type" content="article">
 <meta property="og:title" content="React Native Hello World">
 <meta property="og:url" content="http://donghao.space/2016/10/22/React-Native-Hello-World/index.html">
 <meta property="og:site_name" content="董昊">
-<meta property="og:description" content="新建一个React Native工程，小试牛刀">
-<meta property="og:updated_time" content="2016-10-21T16:35:56.243Z">
+<meta property="og:description" content="新建一个React Native工程，小试牛刀上一篇搭建好了React Native开发环境，那么这一篇自然是按照传统新建Hello World工程咯！废话不多说，直接开干
+
+直接进入Windows的powershell，切换到你要新建工程的目录下，我的是这么写的： cd G:\DeveloperKits\ReactNative
+然后就可以新建工程了，新建一个HelloWorld工程： react">
+<meta property="og:image" content="http://ofevvhaxu.bkt.clouddn.com/VisualStudioCode.png">
+<meta property="og:image" content="http://ofevvhaxu.bkt.clouddn.com/hello_world.png">
+<meta property="og:image" content="http://ofevvhaxu.bkt.clouddn.com/genymotion.png">
+<meta property="og:image" content="http://ofevvhaxu.bkt.clouddn.com/refresh.png">
+<meta property="og:image" content="http://ofevvhaxu.bkt.clouddn.com/imagerefresh.png">
+<meta property="og:updated_time" content="2016-10-23T13:33:58.287Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Native Hello World">
-<meta name="twitter:description" content="新建一个React Native工程，小试牛刀">
+<meta name="twitter:description" content="新建一个React Native工程，小试牛刀上一篇搭建好了React Native开发环境，那么这一篇自然是按照传统新建Hello World工程咯！废话不多说，直接开干
+
+直接进入Windows的powershell，切换到你要新建工程的目录下，我的是这么写的： cd G:\DeveloperKits\ReactNative
+然后就可以新建工程了，新建一个HelloWorld工程： react">
+<meta name="twitter:image" content="http://ofevvhaxu.bkt.clouddn.com/VisualStudioCode.png">
 
 
 
@@ -271,7 +286,21 @@
       
 
       
-        <h3 id="新建一个React-Native工程，小试牛刀"><a href="#新建一个React-Native工程，小试牛刀" class="headerlink" title="新建一个React Native工程，小试牛刀"></a>新建一个React Native工程，小试牛刀</h3>
+        <h3 id="新建一个React-Native工程，小试牛刀"><a href="#新建一个React-Native工程，小试牛刀" class="headerlink" title="新建一个React Native工程，小试牛刀"></a>新建一个React Native工程，小试牛刀</h3><p>上一篇搭建好了React Native开发环境，那么这一篇自然是按照传统新建Hello World工程咯！<br><br>废话不多说，直接开干</p>
+<ol>
+<li>直接进入Windows的powershell，切换到你要新建工程的目录下，我的是这么写的：<br> <code>cd G:\DeveloperKits\ReactNative</code></li>
+<li>然后就可以新建工程了，新建一个HelloWorld工程：<br> <code>react-native init HelloWorld</code></li>
+<li>切换到工程目录下：<br> <code>cd G:\DeveloperKits\ReactNative\HelloWorld</code></li>
+<li>这个时候我们就可以修改我们的代码了，这里介绍一款编辑器,微软的<a href="https://code.visualstudio.com/download" target="_blank" rel="external">Visual Studio Code</a>,用起来还是不错的，而且它还支持React Native，点击下载吧。这时我们就可以用Visual Studio Code打开我们刚刚新建的HelloWorld工程，如图所示：<br><img src="http://ofevvhaxu.bkt.clouddn.com/VisualStudioCode.png" alt=""></li>
+<li>打开项目根目录下的index.android.js文件，然后将里面的代码修改为如下所示，代码的具体含义，自己看文档吧<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> &#123;</div><div class="line">    AppRegistry,</div><div class="line">    Image,</div><div class="line">&#125; <span class="keyword">from</span> <span class="string">'react-native'</span>;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">  render() &#123;</div><div class="line">  <span class="keyword">let</span> pic = &#123;</div><div class="line">  uri: <span class="string">'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'</span></div><div class="line">&#125;;</div><div class="line">  <span class="keyword">return</span> (</div><div class="line">   &lt;Image source=&#123;pic&#125; style=&#123;&#123;width: 193, height: 110&#125;&#125; /&gt;</div><div class="line">   );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">AppRegistry.registerComponent('HelloWorld', () =&gt; HelloWorld);</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>有几个注意点要说一下：<br><img src="http://ofevvhaxu.bkt.clouddn.com/hello_world.png" alt=""><br>其他的看React Native中文网的文档，我就不多说了。<br></p>
+<ol>
+<li>修改完之后，我们就在powershell中<code>react-native start</code>运行packager，新打开一个powershell窗口，同样切换到工程目录下<code>react-native run-android</code>运行工程到模拟器上，然后我们看到了这个样子：<br><img src="http://ofevvhaxu.bkt.clouddn.com/genymotion.png" alt=""><br>那如果我们修改了代码后，难道要再重新执行一次<code>react-native run-android</code>？当然不是，那React Native的调试要怎么做呢，只需点击模拟器的菜单键就会弹出一个菜单，然后点击Reload，模拟器就会显示修改代码后的界面了，这是不是很方便呢！<br><img src="http://ofevvhaxu.bkt.clouddn.com/refresh.png" alt=""><br>这里我遇到一个很蛋疼的问题，不管我怎么点Reload界面都不刷新，后来Google之后才遭到答案，原来需要设置一下，把<code>项目路径\node_modules\React-native\node_modules\node-haste\lib\FileWatcher\index.js</code>中的MAX WAIT_TIME值改得更大一些，比如把120000改成360000，然后我再reload的时候界面就刷新了，具体原因请看这里<a href="http://blog.csdn.net/u012649246/article/details/52052061" target="_blank" rel="external">http://blog.csdn.net/u012649246/article/details/52052061</a><br>实验一下，把代码中图片的Uri改一下改成<code>http://ofevvhaxu.bkt.clouddn.com/avatar_500x500.jpg</code>，看看效果，点一下reload<br><img src="http://ofevvhaxu.bkt.clouddn.com/imagerefresh.png" alt=""><br>OK，刷新成功了。<br></li>
+</ol>
+<p>后记，文章内容讲的不深，还有很多东西都没有讲到，两篇博客讲了环境搭建，新建hello world工程，万事开头难，我们已经把第一件事做好了，剩下的就看看React Native中文网的文档吧，自己再敲一敲代码，学会React Native不难。<br><br>参考文章<a href="http://reactnative.cn/docs/0.35/tutorial.html#content" target="_blank" rel="external">React Native中文网</a></p>
+
       
     </div>
 
